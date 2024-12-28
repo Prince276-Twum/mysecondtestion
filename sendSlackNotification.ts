@@ -14,16 +14,10 @@ const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
 // Debugging: Log the structure of the report
 console.log("Report structure:", JSON.stringify(report, null, 2));
 
-const summary = report.summary;
-
-if (!summary) {
-  console.error("Summary not found in report:", report);
-  process.exit(1);
-}
-
-const passed = summary.passed;
-const failed = summary.failed;
-const total = summary.total;
+// Extract summary information from the report
+const passed = report.numPassedTests;
+const failed = report.numFailedTests;
+const total = report.numTotalTests;
 
 const message = {
   text: `Jest Test Results:\nPassed: ${passed}\nFailed: ${failed}\nTotal: ${total}`,
