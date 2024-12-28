@@ -20,7 +20,35 @@ const failed = report.numFailedTests;
 const total = report.numTotalTests;
 
 const message = {
-  text: `Jest Test Results:\nPassed: ${passed}\nFailed: ${failed}\nTotal: ${total}`,
+  blocks: [
+    {
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: "*Jest Test Results*",
+      },
+    },
+    {
+      type: "divider",
+    },
+    {
+      type: "section",
+      fields: [
+        {
+          type: "mrkdwn",
+          text: `*Passed Tests:*\n${passed}`,
+        },
+        {
+          type: "mrkdwn",
+          text: `*Failed Tests:*\n${failed}`,
+        },
+        {
+          type: "mrkdwn",
+          text: `*Total Tests:*\n${total}`,
+        },
+      ],
+    },
+  ],
 };
 
 axios
