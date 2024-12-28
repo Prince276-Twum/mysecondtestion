@@ -1,4 +1,5 @@
-import * as fs from "fs";
+// filepath: /C:/Users/princ/Desktop/New folder/mysecondtestion/sendSlackNotification.ts
+import fs from "fs";
 import axios from "axios";
 
 const reportPath = "./reports/jest-stare/result.json";
