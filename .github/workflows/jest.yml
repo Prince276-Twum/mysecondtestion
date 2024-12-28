@@ -25,7 +25,7 @@ jobs:
       - name: Compile TypeScript
         run: npx tsc
       - name: Send Slack Notification
-
+        if: always() # Ensure this step runs even if previous steps fail
         run: node dist/sendSlackNotification.js
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
