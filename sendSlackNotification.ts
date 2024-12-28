@@ -1,6 +1,5 @@
 import fs from "fs";
 import axios from "axios";
-import path from "path";
 
 const reportPath = "./reports/jest-stare/result.json";
 const webhookUrl = process.env.SLACK_WEBHOOK_URL;
@@ -57,22 +56,23 @@ const message = {
         text: "*Detailed Results:*",
       },
     },
-    ...report.testResults.map((testResult: any) => ({
-      type: "section",
-      text: {
-        type: "mrkdwn",
-        text: `*${path.basename(
-          testResult.testFilePath
-        )}*\n${testResult.testResults
-          .map(
-            (result: any) =>
-              `- ${result.title}: ${
-                result.status === "passed" ? ":white_check_mark:" : ":x:"
-              }`
-          )
-          .join("\n")}`,
-      },
-    })),
+    ...report.testResults.map((testResult: any) => {
+      const fileName = testResult.testFilePath.split("\\").pop(); // Extract the file name
+      return {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `*${fileName}*\n${testResult.testResults
+            .map(
+              (result: any) =>
+                `- ${result.title}: ${
+                  result.status === "passed" ? ":white_check_mark:" : ":x:"
+                }`
+            )
+            .join("\n")}`,
+        },
+      };
+    }),
   ],
 };
 
