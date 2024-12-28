@@ -24,10 +24,7 @@ jobs:
         run: ls -la ./reports/jest-stare
       - name: Compile TypeScript
         run: npx tsc
-      - name: List dist directory contents
-        run: ls -la ./dist
       - name: Send Slack Notification
-        if: always() # Ensure this step runs even if previous steps fail
         run: node dist/sendSlackNotification.js
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
