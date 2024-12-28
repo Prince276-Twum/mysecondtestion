@@ -20,6 +20,8 @@ jobs:
         run: mkdir -p ./reports/jest-stare
       - name: Run tests and generate report
         run: npm test -- --reporters=default --reporters=jest-junit --reporters=jest-stare
+      - name: List report directory contents
+        run: ls -la ./reports/jest-stare
       - name: Compile TypeScript
         run: npx tsc
       - name: Send Slack Notification

@@ -19,7 +19,7 @@ const config: Config = {
       {
         resultDir: "./reports/jest-stare",
         reportTitle: "Test Report",
-        coverageLink: "../coverage/lcov-report/index.html",
+        resultJson: "result.json", // Corrected path
       },
     ],
   ],
