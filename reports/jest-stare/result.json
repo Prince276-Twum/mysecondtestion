@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1735398925414,
+  "startTime": 1735399376032,
   "success": false,
   "testResults": [
     {
@@ -37,10 +37,10 @@
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1735398926795,
-        "runtime": 833,
+        "end": 1735399377479,
+        "runtime": 894,
         "slow": false,
-        "start": 1735398925962
+        "start": 1735399376585
       },
       "skipped": false,
       "snapshot": {
@@ -56,7 +56,7 @@
       "testResults": [
         {
           "ancestorTitles": [],
-          "duration": 60,
+          "duration": 58,
           "failureDetails": [
             {
               "matcherResult": {
@@ -78,7 +78,7 @@
         },
         {
           "ancestorTitles": [],
-          "duration": 156,
+          "duration": 189,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "It calls onUserAdd when the form is submitted",
