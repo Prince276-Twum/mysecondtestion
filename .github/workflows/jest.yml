@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests and generate report
-        run: npm test
+        run: npm test -- --reporters=default --reporters=jest-junit
       - name: Send Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
