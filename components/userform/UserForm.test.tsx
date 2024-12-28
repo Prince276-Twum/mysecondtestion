@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
-import UserForm from "./UserForm";
+import UserForm from "../userlist/UserForm";
 import "@testing-library/jest-dom";
 import { userType } from "@/app/page";
 test("it shows two input and a button", () => {
