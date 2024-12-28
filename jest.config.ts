@@ -14,6 +14,14 @@ const config: Config = {
   reporters: [
     "default",
     ["jest-junit", { outputDirectory: "./reports", outputName: "junit.xml" }],
+    [
+      "jest-stare",
+      {
+        resultDir: "./reports/jest-stare",
+        reportTitle: "Test Report",
+        coverageLink: "../coverage/lcov-report/index.html",
+      },
+    ],
   ],
 };
 
