@@ -1,4 +1,3 @@
-// filepath: /C:/Users/princ/Desktop/New folder/mysecondtestion/sendSlackNotification.ts
 import fs from "fs";
 import axios from "axios";
 
@@ -12,7 +11,16 @@ if (!fs.existsSync(reportPath)) {
 
 const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
 
+// Debugging: Log the structure of the report
+console.log("Report structure:", JSON.stringify(report, null, 2));
+
 const summary = report.summary;
+
+if (!summary) {
+  console.error("Summary not found in report:", report);
+  process.exit(1);
+}
+
 const passed = summary.passed;
 const failed = summary.failed;
 const total = summary.total;
