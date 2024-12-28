@@ -20,15 +20,9 @@ jobs:
         run: mkdir -p ./reports/jest-stare
       - name: Run tests and generate report
         run: npm test -- --reporters=default --reporters=jest-junit --reporters=jest-stare
-      - name: Upload test report
-        uses: actions/upload-artifact@v3
-        with:
-          name: jest-stare-report
-          path: ./reports/jest-stare
+      - name: Compile TypeScript
+        run: npx tsc
       - name: Send Slack Notification
-        uses: rtCamp/action-slack-notify@v2
+        run: node dist/sendSlackNotification.js
         env:
-          SLACK_CHANNEL: your-slack-channel
-          SLACK_COLOR: good
-          SLACK_MESSAGE: "Jest tests have completed. Check the detailed report [here](./reports/jest-stare/index.html)."
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
