@@ -9,7 +9,7 @@ test("it shows two input and a button", () => {
   const button = screen.getByRole("button");
 
   expect(button).toBeInTheDocument();
-  expect(input).toHaveLength(4);
+  expect(input).toHaveLength(2);
 });
 
 test("It calls onUserAdd when the form is submitted", async () => {
