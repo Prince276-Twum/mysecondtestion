@@ -17,16 +17,12 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests and generate report
-        run: npm test -- --reporters=default --reporters=jest-junit
-      - name: Upload test report
-        uses: actions/upload-artifact@v3
-        with:
-          name: junit-report
-          path: ./reports/junit.xml
-      - name: Send Slack Notification
-        uses: rtCamp/action-slack-notify@v2
+        run: npm test -- --json --outputFile=ctrf-report.json
+      - name: Send Slack Notification for Results
+        run: npx slack-ctrf results ctrf-report.json
         env:
-          SLACK_CHANNEL: your-slack-channel
-          SLACK_COLOR: good
-          SLACK_MESSAGE: "Jest test results are available. Check the attached report."
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Send Slack Notification for Flaky Tests
+        run: npx slack-ctrf flaky ctrf-report.json
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
