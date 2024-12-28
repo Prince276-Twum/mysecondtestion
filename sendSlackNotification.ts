@@ -22,14 +22,12 @@ const total = report.numTotalTests;
 const message = {
   blocks: [
     {
-      type: "section",
+      type: "header",
       text: {
-        type: "mrkdwn",
-        text: "*Jest Test Results*",
+        type: "plain_text",
+        text: "Jest Test Results",
+        emoji: true,
       },
-    },
-    {
-      type: "divider",
     },
     {
       type: "section",
@@ -48,6 +46,30 @@ const message = {
         },
       ],
     },
+    {
+      type: "divider",
+    },
+    {
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: "*Detailed Results:*",
+      },
+    },
+    ...report.testResults.map((testResult: any) => ({
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: `*${testResult.testFilePath}*\n${testResult.testResults
+          .map(
+            (result: any) =>
+              `- ${result.title}: ${
+                result.status === "passed" ? ":white_check_mark:" : ":x:"
+              }`
+          )
+          .join("\n")}`,
+      },
+    })),
   ],
 };
 
