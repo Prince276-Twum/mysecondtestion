@@ -1,5 +1,6 @@
 import fs from "fs";
 import axios from "axios";
+import path from "path";
 
 const reportPath = "./reports/jest-stare/result.json";
 const webhookUrl = process.env.SLACK_WEBHOOK_URL;
@@ -60,7 +61,9 @@ const message = {
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `*${testResult.testFilePath}*\n${testResult.testResults
+        text: `*${path.basename(
+          testResult.testFilePath
+        )}*\n${testResult.testResults
           .map(
             (result: any) =>
               `- ${result.title}: ${
