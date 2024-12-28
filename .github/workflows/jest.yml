@@ -18,12 +18,15 @@ jobs:
         run: npm install
       - name: Run tests and generate report
         run: npm test -- --reporters=default --reporters=jest-junit
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: junit-report
+          path: ./reports/junit.xml
       - name: Send Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: your-slack-channel
           SLACK_COLOR: good
-          SLACK_MESSAGE: "Jest test results"
+          SLACK_MESSAGE: "Jest test results are available. Check the attached report."
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        with:
-          args: ./reports/junit.xml
