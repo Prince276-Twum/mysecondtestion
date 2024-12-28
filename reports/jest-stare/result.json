@@ -1,8 +1,8 @@
 {
-  "numFailedTestSuites": 0,
-  "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 2,
+  "numFailedTestSuites": 1,
+  "numFailedTests": 1,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 1,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1735397620587,
+  "startTime": 1735398925414,
   "success": false,
   "testResults": [
     {
       "leaks": false,
-      "numFailingTests": 0,
-      "numPassingTests": 2,
+      "numFailingTests": 1,
+      "numPassingTests": 1,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1735397621995,
-        "runtime": 829,
+        "end": 1735398926795,
+        "runtime": 833,
         "slow": false,
-        "start": 1735397621166
+        "start": 1735398925962
       },
       "skipped": false,
       "snapshot": {
@@ -56,20 +56,29 @@
       "testResults": [
         {
           "ancestorTitles": [],
-          "duration": 59,
-          "failureDetails": [],
-          "failureMessages": [],
+          "duration": 60,
+          "failureDetails": [
+            {
+              "matcherResult": {
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m4\u001b[39m\nReceived length: \u001b[31m2\u001b[39m\nReceived array:  \u001b[31m[<input type=\"text\" value=\"\" />, <input type=\"text\" value=\"\" />]\u001b[39m",
+                "pass": false
+              }
+            }
+          ],
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m4\u001b[39m\nReceived length: \u001b[31m2\u001b[39m\nReceived array:  \u001b[31m[<input type=\"text\" value=\"\" />, <input type=\"text\" value=\"\" />]\u001b[39m\n    at Object.<anonymous> (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\components\\userform\\UserForm.test.tsx:12:17)\n    at Promise.then.completed (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\utils.js:231:10)\n    at _callCircusTest (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:316:40)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _runTest (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:252:3)\n    at async _runTestsForDescribeBlock (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:126:9)\n    at async run (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:71:3)\n    at async runAndTransformResultsToJestFormat (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapterInit.js:122:21)\n    at async jestAdapter (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapter.js:79:19)\n    at async runTestInternal (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-runner\\build\\runTest.js:367:16)\n    at async runTest (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-runner\\build\\runTest.js:444:34)"
+          ],
           "fullName": "it shows two input and a button",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 2,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "status": "passed",
+          "status": "failed",
           "title": "it shows two input and a button"
         },
         {
           "ancestorTitles": [],
-          "duration": 151,
+          "duration": 156,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "It calls onUserAdd when the form is submitted",
@@ -81,7 +90,7 @@
           "title": "It calls onUserAdd when the form is submitted"
         }
       ],
-      "failureMessage": null
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mit shows two input and a button\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected length: \u001b[32m4\u001b[39m\n    Received length: \u001b[31m2\u001b[39m\n    Received array:  \u001b[31m[<input type=\"text\" value=\"\" />, <input type=\"text\" value=\"\" />]\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 10 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 11 |\u001b[39m   expect(button)\u001b[33m.\u001b[39mtoBeInTheDocument()\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 12 |\u001b[39m   expect(input)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m4\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 13 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 14 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 15 |\u001b[39m test(\u001b[32m\"It calls onUserAdd when the form is submitted\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mcomponents/userform/UserForm.test.tsx\u001b[39m\u001b[0m\u001b[2m:12:17)\u001b[22m\u001b[2m\u001b[22m\n"
     }
   ],
   "wasInterrupted": false

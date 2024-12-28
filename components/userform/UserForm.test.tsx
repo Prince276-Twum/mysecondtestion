@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
-import UserForm from "../userlist/UserForm";
+import UserForm from "./UserForm";
 import "@testing-library/jest-dom";
 import { userType } from "@/app/page";
 test("it shows two input and a button", () => {
@@ -9,7 +9,7 @@ test("it shows two input and a button", () => {
   const button = screen.getByRole("button");
 
   expect(button).toBeInTheDocument();
-  expect(input).toHaveLength(2);
+  expect(input).toHaveLength(4);
 });
 
 test("It calls onUserAdd when the form is submitted", async () => {

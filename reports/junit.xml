@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" errors="0" time="1.433">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-12-28T14:53:41" time="0.829" tests="2">
-    <testcase classname=" it shows two input and a button" name=" it shows two input and a button" time="0.059">
+<testsuites name="jest tests" tests="2" failures="1" errors="0" time="1.404">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2024-12-28T15:15:25" time="0.833" tests="2">
+    <testcase classname=" it shows two input and a button" name=" it shows two input and a button" time="0.06">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Expected length: 4
+Received length: 2
+Received array:  [&lt;input type=&quot;text&quot; value=&quot;&quot; /&gt;, &lt;input type=&quot;text&quot; value=&quot;&quot; /&gt;]
+    at Object.&lt;anonymous&gt; (C:\Users\princ\Desktop\New folder\mysecondtestion\components\userform\UserForm.test.tsx:12:17)
+    at Promise.then.completed (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _runTest (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\run.js:252:3)
+    at async _runTestsForDescribeBlock (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\run.js:126:9)
+    at async run (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\run.js:71:3)
+    at async runAndTransformResultsToJestFormat (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at async jestAdapter (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at async runTestInternal (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-runner\build\runTest.js:367:16)
+    at async runTest (C:\Users\princ\Desktop\New folder\mysecondtestion\node_modules\jest-runner\build\runTest.js:444:34)</failure>
     </testcase>
-    <testcase classname=" It calls onUserAdd when the form is submitted" name=" It calls onUserAdd when the form is submitted" time="0.151">
+    <testcase classname=" It calls onUserAdd when the form is submitted" name=" It calls onUserAdd when the form is submitted" time="0.156">
     </testcase>
   </testsuite>
 </testsuites>
