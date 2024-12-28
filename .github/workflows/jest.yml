@@ -1,23 +1,28 @@
-name: Tests for Next.js app
+name: Test summary example
 
-on: [push]
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
 jobs:
-  NextJS-Tests:
-    name: Tests for Next.js app
+  testing:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
-
       - name: Install dependencies
-        run: |
-          npm install
-
-      - name: Run Jest tests
-        run: npm test
+        run: npm install
+      - name: Build
+        run: npx tsc
+      - name: Send Slack Notification
+        run: npx slack-ctrf results ctrf-report.json
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Send Slack Notification
+        run: npx slack-ctrf flaky ctrf-report.json
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
