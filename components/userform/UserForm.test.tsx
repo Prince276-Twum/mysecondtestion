@@ -21,7 +21,7 @@ test("It calls onUserAdd when the form is submitted", async () => {
 
   render(<UserForm onUserAdd={callBacnk} />);
 
-  const [nameInput, emailInput] = screen.getAllByRole("textbox");
+  const [nameInput, emailInput] = screen.getAllByRole("tetbox");
 
   await user.click(nameInput);
   await user.keyboard("Prince");

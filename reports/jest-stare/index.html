@@ -89,7 +89,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -97,7 +97,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">2 passed, 2 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">1 passed, 2 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -126,10 +126,10 @@
 }</div>
         <div id="accordion">
             <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 0,
-  &quot;numFailedTests&quot;: 0,
-  &quot;numPassedTestSuites&quot;: 1,
-  &quot;numPassedTests&quot;: 2,
+  &quot;numFailedTestSuites&quot;: 1,
+  &quot;numFailedTests&quot;: 1,
+  &quot;numPassedTestSuites&quot;: 0,
+  &quot;numPassedTests&quot;: 1,
   &quot;numPendingTestSuites&quot;: 0,
   &quot;numPendingTests&quot;: 0,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
@@ -153,21 +153,21 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1735400385507,
+  &quot;startTime&quot;: 1735537342890,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
       &quot;leaks&quot;: false,
-      &quot;numFailingTests&quot;: 0,
-      &quot;numPassingTests&quot;: 2,
+      &quot;numFailingTests&quot;: 1,
+      &quot;numPassingTests&quot;: 1,
       &quot;numPendingTests&quot;: 0,
       &quot;numTodoTests&quot;: 0,
       &quot;openHandles&quot;: [],
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1735400386950,
-        &quot;runtime&quot;: 929,
+        &quot;end&quot;: 1735537344765,
+        &quot;runtime&quot;: 1066,
         &quot;slow&quot;: false,
-        &quot;start&quot;: 1735400386021
+        &quot;start&quot;: 1735537343699
       },
       &quot;skipped&quot;: false,
       &quot;snapshot&quot;: {
@@ -183,7 +183,7 @@
       &quot;testResults&quot;: [
         {
           &quot;ancestorTitles&quot;: [],
-          &quot;duration&quot;: 84,
+          &quot;duration&quot;: 88,
           &quot;failureDetails&quot;: [],
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;it shows two input and a button&quot;,
@@ -196,19 +196,25 @@
         },
         {
           &quot;ancestorTitles&quot;: [],
-          &quot;duration&quot;: 187,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
+          &quot;duration&quot;: 53,
+          &quot;failureDetails&quot;: [
+            {
+              &quot;name&quot;: &quot;TestingLibraryElementError&quot;
+            }
+          ],
+          &quot;failureMessages&quot;: [
+            &quot;TestingLibraryElementError: Unable to find an accessible element with the role \&quot;tetbox\&quot;\n\nHere are the accessible roles:\n\n  textbox:\n\n  Name \&quot;\&quot;:\n  \u001b[36m&lt;input\u001b[39m\n    \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n    \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n  \u001b[36m&#x2F;&gt;\u001b[39m\n\n  Name \&quot;\&quot;:\n  \u001b[36m&lt;input\u001b[39m\n    \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n    \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n  \u001b[36m&#x2F;&gt;\u001b[39m\n\n  --------------------------------------------------\n  button:\n\n  Name \&quot;Add User\&quot;:\n  \u001b[36m&lt;button &#x2F;&gt;\u001b[39m\n\n  --------------------------------------------------\n\nIgnored nodes: comments, script, style\n\u001b[36m&lt;body&gt;\u001b[39m\n  \u001b[36m&lt;div&gt;\u001b[39m\n    \u001b[36m&lt;form&gt;\u001b[39m\n      \u001b[36m&lt;div&gt;\u001b[39m\n        \u001b[36m&lt;label&gt;\u001b[39m\n          \u001b[0mName\u001b[0m\n        \u001b[36m&lt;&#x2F;label&gt;\u001b[39m\n        \u001b[36m&lt;input\u001b[39m\n          \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n          \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n        \u001b[36m&#x2F;&gt;\u001b[39m\n      \u001b[36m&lt;&#x2F;div&gt;\u001b[39m\n      \u001b[36m&lt;div&gt;\u001b[39m\n        \u001b[36m&lt;label&gt;\u001b[39m\n          \u001b[0mEmail\u001b[0m\n        \u001b[36m&lt;&#x2F;label&gt;\u001b[39m\n        \u001b[36m&lt;input\u001b[39m\n          \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n          \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n        \u001b[36m&#x2F;&gt;\u001b[39m\n      \u001b[36m&lt;&#x2F;div&gt;\u001b[39m\n      \u001b[36m&lt;button&gt;\u001b[39m\n        \u001b[0mAdd User\u001b[0m\n      \u001b[36m&lt;&#x2F;button&gt;\u001b[39m\n    \u001b[36m&lt;&#x2F;form&gt;\u001b[39m\n  \u001b[36m&lt;&#x2F;div&gt;\u001b[39m\n\u001b[36m&lt;&#x2F;body&gt;\u001b[39m\n    at Object.getElementError (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\@testing-library\\dom\\dist\\config.js:37:19)\n    at C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:76:38\n    at getAllByRole (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:109:15)\n    at Object.&lt;anonymous&gt; (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\components\\userform\\UserForm.test.tsx:24:42)\n    at Promise.then.completed (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\utils.js:298:28)\n    at new Promise (&lt;anonymous&gt;)\n    at callAsyncCircusFn (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\utils.js:231:10)\n    at _callCircusTest (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:316:40)\n    at processTicksAndRejections (node:internal&#x2F;process&#x2F;task_queues:95:5)\n    at async _runTest (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:252:3)\n    at async _runTestsForDescribeBlock (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:126:9)\n    at async run (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\run.js:71:3)\n    at async runAndTransformResultsToJestFormat (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapterInit.js:122:21)\n    at async jestAdapter (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-circus\\build\\legacy-code-todo-rewrite\\jestAdapter.js:79:19)\n    at async runTestInternal (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-runner\\build\\runTest.js:367:16)\n    at async runTest (C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion\\node_modules\\jest-runner\\build\\runTest.js:444:34)&quot;
+          ],
           &quot;fullName&quot;: &quot;It calls onUserAdd when the form is submitted&quot;,
           &quot;invocations&quot;: 1,
           &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 2,
+          &quot;numPassingAsserts&quot;: 0,
           &quot;retryReasons&quot;: [],
-          &quot;status&quot;: &quot;passed&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
           &quot;title&quot;: &quot;It calls onUserAdd when the form is submitted&quot;
         }
       ],
-      &quot;failureMessage&quot;: null
+      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mIt calls onUserAdd when the form is submitted\u001b[39m\u001b[22m\n\n    TestingLibraryElementError: Unable to find an accessible element with the role \&quot;tetbox\&quot;\n\n    Here are the accessible roles:\n\n      textbox:\n\n      Name \&quot;\&quot;:\n      \u001b[36m&lt;input\u001b[39m\n        \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n        \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n      \u001b[36m&#x2F;&gt;\u001b[39m\n\n      Name \&quot;\&quot;:\n      \u001b[36m&lt;input\u001b[39m\n        \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n        \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n      \u001b[36m&#x2F;&gt;\u001b[39m\n\n      --------------------------------------------------\n      button:\n\n      Name \&quot;Add User\&quot;:\n      \u001b[36m&lt;button &#x2F;&gt;\u001b[39m\n\n      --------------------------------------------------\n\n    Ignored nodes: comments, script, style\n    \u001b[36m&lt;body&gt;\u001b[39m\n      \u001b[36m&lt;div&gt;\u001b[39m\n        \u001b[36m&lt;form&gt;\u001b[39m\n          \u001b[36m&lt;div&gt;\u001b[39m\n            \u001b[36m&lt;label&gt;\u001b[39m\n              \u001b[0mName\u001b[0m\n            \u001b[36m&lt;&#x2F;label&gt;\u001b[39m\n            \u001b[36m&lt;input\u001b[39m\n              \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n              \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n            \u001b[36m&#x2F;&gt;\u001b[39m\n          \u001b[36m&lt;&#x2F;div&gt;\u001b[39m\n          \u001b[36m&lt;div&gt;\u001b[39m\n            \u001b[36m&lt;label&gt;\u001b[39m\n              \u001b[0mEmail\u001b[0m\n            \u001b[36m&lt;&#x2F;label&gt;\u001b[39m\n            \u001b[36m&lt;input\u001b[39m\n              \u001b[33mtype\u001b[39m&#x3D;\u001b[32m\&quot;text\&quot;\u001b[39m\n              \u001b[33mvalue\u001b[39m&#x3D;\u001b[32m\&quot;\&quot;\u001b[39m\n            \u001b[36m&#x2F;&gt;\u001b[39m\n          \u001b[36m&lt;&#x2F;div&gt;\u001b[39m\n          \u001b[36m&lt;button&gt;\u001b[39m\n            \u001b[0mAdd User\u001b[0m\n          \u001b[36m&lt;&#x2F;button&gt;\u001b[39m\n        \u001b[36m&lt;&#x2F;form&gt;\u001b[39m\n      \u001b[36m&lt;&#x2F;div&gt;\u001b[39m\n    \u001b[36m&lt;&#x2F;body&gt;\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 22 |\u001b[39m   render(\u001b[33m&lt;\u001b[39m\u001b[33mUserForm\u001b[39m onUserAdd\u001b[33m&#x3D;\u001b[39m{callBacnk} \u001b[33m&#x2F;\u001b[39m\u001b[33m&gt;\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 23 |\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m&gt;\u001b[22m\u001b[2m\u001b[39m\u001b[90m 24 |\u001b[39m   \u001b[36mconst\u001b[39m [nameInput\u001b[33m,\u001b[39m emailInput] \u001b[33m&#x3D;\u001b[39m screen\u001b[33m.\u001b[39mgetAllByRole(\u001b[32m\&quot;tetbox\&quot;\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 25 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 26 |\u001b[39m   \u001b[36mawait\u001b[39m user\u001b[33m.\u001b[39mclick(nameInput)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 27 |\u001b[39m   \u001b[36mawait\u001b[39m user\u001b[33m.\u001b[39mkeyboard(\u001b[32m\&quot;Prince\&quot;\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.getElementError (\u001b[22m\u001b[2mnode_modules&#x2F;@testing-library&#x2F;dom&#x2F;dist&#x2F;config.js\u001b[2m:37:19)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[22m\u001b[2mnode_modules&#x2F;@testing-library&#x2F;dom&#x2F;dist&#x2F;query-helpers.js\u001b[2m:76:38\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat getAllByRole (\u001b[22m\u001b[2mnode_modules&#x2F;@testing-library&#x2F;dom&#x2F;dist&#x2F;query-helpers.js\u001b[2m:109:15)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.&lt;anonymous&gt; (\u001b[22m\u001b[2m\u001b[0m\u001b[36mcomponents&#x2F;userform&#x2F;UserForm.test.tsx\u001b[39m\u001b[0m\u001b[2m:24:42)\u001b[22m\u001b[2m\u001b[22m\n&quot;
     }
   ],
   &quot;wasInterrupted&quot;: false
@@ -274,7 +280,7 @@
   ],
   &quot;rootDir&quot;: &quot;C:\\Users\\princ\\Desktop\\New folder\\mysecondtestion&quot;,
   &quot;runTestsByPath&quot;: false,
-  &quot;seed&quot;: 1612933024,
+  &quot;seed&quot;: 683484384,
   &quot;skipFilter&quot;: false,
   &quot;snapshotFormat&quot;: {
     &quot;escapeString&quot;: false,
